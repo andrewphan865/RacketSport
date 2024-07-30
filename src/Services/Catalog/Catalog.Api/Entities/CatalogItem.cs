@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
-namespace Catalog.Api.Entities;
+﻿namespace Catalog.Api.Entities;
 
 public class CatalogItem : BaseEntity
 {
@@ -10,14 +8,16 @@ public class CatalogItem : BaseEntity
     public decimal Price { get; set; }
     public string PictureUrl { get; set; }
     public bool IsActive { get; set; } = true;
-    public int AvailableStock { get; set; }
+    public bool IsDeleted { get; set; } = false;
+    public int AvailableStock { get; set; } = 0;
     public Guid? CatalogTypeId { get; set; }
     public CatalogType CatalogType { get; set; } = null!;
     public Guid? CatalogBrandId { get; set; }
     public CatalogBrand CatalogBrand { get; set; } = null!;
+    public SportType SportType { get; set; }
 
     // For variant product properties
-    public List<CatalogAttribute> CatalogAttributes { get; set; } = new();
+    public Dictionary<string, string> Attributes { get; set; } = new();
 
     public int RemoveStock(int quantityDesired)
     {
