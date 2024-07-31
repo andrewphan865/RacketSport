@@ -1,11 +1,11 @@
+version: '3.4'
+
 services:
-  postgres:
+  catalogdb:
     image: postgres
-    environment:
-      - POSTGRES_PASSWORD=postgrespw
-    ports:
-      - 5432:5432
-    volumes:
-      - pgdata:/var/lib/postresql/data
-volumes:
-  pgdata:
+
+  catalog.api:
+    image: ${DOCKER_REGISTRY-}catalogapi
+    build:
+      context: src
+      dockerfile: Services/Catalog/Catalog.Api/Dockerfile

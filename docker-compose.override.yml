@@ -1,0 +1,33 @@
+version: '3.4'
+
+services:
+
+  catalogdb:
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgrespw
+      - POSTGRES_DB=CatalogDb    
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_catalog:/var/lib/postresql/data
+    restart: on-failure
+    deploy:
+      restart_policy:
+        condition: on-failure
+        max_attempts: 5
+
+  catalog.api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+      - ConnectionStrings__CatalogConnection=Server=catalogdb;Port=5432;Database=CatalogDb;User Id=postgres;Password=postgrespw  
+    depends_on:
+    - catalogdb
+    ports:
+      - "6000:8080"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+
+volumes:
+  postgres_catalog:
