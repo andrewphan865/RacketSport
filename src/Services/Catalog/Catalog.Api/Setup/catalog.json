@@ -1,0 +1,306 @@
+[
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Arcsaber 11 Pro",
+    "SportType": "Badminton",
+    "Description": "Yonex Arcsaber 11 Pro",
+    "Price": 339.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png",
+    "Attributes": {
+      "Series": "Arcsaber",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Gray/Yellow"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Arcsaber 11 Play",
+    "SportType": "Badminton",
+    "Description": "Yonex Arcsaber 11 Play",
+    "Price": 239.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png",
+    "Attributes": {
+      "Series": "Arcsaber",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Gray/Yellow"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Arcsaber 11 Tour",
+    "SportType": "Badminton",
+    "Description": "Yonex Arcsaber 11 Tour",
+    "Price": 211.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png",
+    "Attributes": {
+      "Series": "Arcsaber",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Gray/Yellow"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Arcsaber 7 Pro",
+    "SportType": "Badminton",
+    "Description": "Yonex Arcsaber 7 Pro",
+    "Price": 279.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png",
+    "Attributes": {
+      "Series": "Arcsaber",
+      "Flex": "Medium",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Grayish Pearl"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Arcsaber 7 Tour",
+    "SportType": "Badminton",
+    "Description": "Yonex Arcsaber 7 Tour",
+    "Price": 229.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png",
+    "Attributes": {
+      "Series": "Arcsaber",
+      "Flex": "Medium",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Grayish Pearl"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Arcsaber 7 Play",
+    "SportType": "Badminton",
+    "Description": "Yonex Arcsaber 7 Play",
+    "Price": 189.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png",
+    "Attributes": {
+      "Series": "Arcsaber",
+      "Flex": "Medium",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Grayish Pearl"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex ASTROX 88D Pro Gen3",
+    "SportType": "Badminton",
+    "Description": "Yonex ASTROX 88D Pro Gen3",
+    "Price": 369.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/88d-p.png",
+    "Attributes": {
+      "Series": "ASTROX",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Silver"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex ASTROX 88D Play",
+    "SportType": "Badminton",
+    "Description": "Yonex ASTROX 88D Play",
+    "Price": 269.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/88d-p.png",
+    "Attributes": {
+      "Series": "ASTROX",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Silver"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex ASTROX 88D Tour",
+    "SportType": "Badminton",
+    "Description": "Yonex ASTROX 88D Tour",
+    "Price": 169.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/88d-p.png",
+    "Attributes": {
+      "Series": "ASTROX",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Silver"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex ASTROX 88S Pro Gen3",
+    "SportType": "Badminton",
+    "Description": "Yonex ASTROX 88S Pro Gen3",
+    "Price": 369.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/88s-p.png",
+    "Attributes": {
+      "Series": "ASTROX",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Silver"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex ASTROX 88S Play",
+    "SportType": "Badminton",
+    "Description": "Yonex ASTROX 88S Play",
+    "Price": 269.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/88s-p.png",
+    "Attributes": {
+      "Series": "ASTROX",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Silver"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex ASTROX 88S Tour",
+    "SportType": "Badminton",
+    "Description": "Yonex ASTROX 88S Tour",
+    "Price": 169.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/88s-p.png",
+    "Attributes": {
+      "Series": "ASTROX",
+      "Flex": "Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Silver"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Nanoflare 1000Z",
+    "SportType": "Badminton",
+    "Description": "Yonex Nanoflare 1000Z",
+    "Price": 319.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/nf_1000_z.png",
+    "Attributes": {
+      "Series": "Nanoflare",
+      "Flex": "Extra Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Yellow"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Nanoflare 1000Z Tour",
+    "SportType": "Badminton",
+    "Description": "Yonex Nanoflare 1000Z Tour",
+    "Price": 219.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/nf_1000_z.png",
+    "Attributes": {
+      "Series": "Nanoflare",
+      "Flex": "Extra Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Yellow"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Yonex",
+    "Name": "Yonex Nanoflare 800 PRO",
+    "SportType": "Badminton",
+    "Description": "Yonex Nanoflare 800 PRO",
+    "Price": 319.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/nf-800-p.png",
+    "Attributes": {
+      "Series": "Nanoflare",
+      "Flex": "Extra Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Blue"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Victor",
+    "Name": "Victor Thruster 2024 NEW RYUGA2 PRO",
+    "SportType": "Badminton",
+    "Description": "Victor Thruster 2024 NEW RYUGA2 PRO",
+    "Price": 279.00,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/ryuga2pro.png",
+    "Attributes": {
+      "Series": "Thruster",
+      "Flex": "Extra Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Blue"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Victor",
+    "Name": "Victor Auraspeed 90K Metallic",
+    "SportType": "Badminton",
+    "Description": "Victor Auraspeed 90K Metallic Badminton Racquet",
+    "Price": 278.98,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/Auraspeed90K.png",
+    "Attributes": {
+      "Series": "Auraspeed",
+      "Flex": "Extra Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Blue"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Victor",
+    "Name": "Victor Auraspeed ARS-LJH Speed",
+    "SportType": "Badminton",
+    "Description": "Victor Auraspeed ARS-LJH Speed Attacking Badminton Racquet",
+    "Price": 236.95,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/RS-LJHSpeed.png",
+    "Attributes": {
+      "Series": "Auraspeed",
+      "Flex": "Extra Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Red"
+    }
+  },
+  {
+    "Type": "Racket",
+    "Brand": "Victor",
+    "Name": "Victor Thruster F HS Limited Edition",
+    "SportType": "Badminton",
+    "Description": "Victor Thruster F HS Limited Edition Badminton Racquet",
+    "Price": 309,
+    "PictureUrl": "https://rs9storage.blob.core.windows.net/racket-images/Thruster-F-HS-l.png",
+    "Attributes": {
+      "Series": "Thruster",
+      "Flex": "Extra Stiff",
+      "Weight": "3U/U4",
+      "Grip Size": "G4/G5",
+      "Color(s)": "Black / Red"
+    }
+  }
+]

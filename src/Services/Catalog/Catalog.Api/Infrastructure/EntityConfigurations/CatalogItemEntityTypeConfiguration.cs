@@ -1,9 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Catalog.Api.Infrastructure.EntityConfigurations;
 
@@ -15,10 +11,10 @@ class CatalogItemEntityTypeConfiguration : IEntityTypeConfiguration<CatalogItem>
 
         builder.Property(item => item.Name)
             .IsRequired(true)
-            .HasMaxLength(50);
+            .HasMaxLength(200);
 
         builder.Property(item => item.Price)
-            .HasPrecision(4, 2)
+            .HasPrecision(10, 2)
             .IsRequired(true);     
 
         builder.HasOne(item => item.CatalogBrand)
