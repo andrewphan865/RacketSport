@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "2ea19c81-32f1-452a-82e3-07e45c967b85",
+		"name": "RacketSport",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Catalog",
+			"item": [
+				{
+					"name": "Get all items",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Version",
+								"value": "1.0",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{catalogApi}}/api/catalog/items?api-version=1.0&PageSize=100&PageIndex=0",
+							"host": [
+								"{{catalogApi}}"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"items"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								},
+								{
+									"key": "PageSize",
+									"value": "100"
+								},
+								{
+									"key": "PageIndex",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Api-Version",
+										"value": "1.0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{catalogApi}}/api/v1/catalog/items",
+									"host": [
+										"{{catalogApi}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"catalog",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jul 2024 11:22:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pageIndex\": 0,\n    \"pageSize\": 10,\n    \"count\": 19,\n    \"data\": [\n        {\n            \"name\": \"Victor Auraspeed 90K Metallic\",\n            \"description\": \"Victor Auraspeed 90K Metallic Badminton Racquet\",\n            \"price\": 278.98,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/Auraspeed90K.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Auraspeed\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Blue\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"a5751231-7c29-4fde-9193-c8d52da7a3bb\",\n            \"createdAt\": \"2024-07-30T10:58:44.642009Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642009Z\"\n        },\n        {\n            \"name\": \"Victor Auraspeed ARS-LJH Speed\",\n            \"description\": \"Victor Auraspeed ARS-LJH Speed Attacking Badminton Racquet\",\n            \"price\": 236.95,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/RS-LJHSpeed.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Auraspeed\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Red\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"2aff3259-2d99-4998-8bca-ec60269f8094\",\n            \"createdAt\": \"2024-07-30T10:58:44.64201Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.64201Z\"\n        },\n        {\n            \"name\": \"Victor Thruster 2024 NEW RYUGA2 PRO\",\n            \"description\": \"Victor Thruster 2024 NEW RYUGA2 PRO\",\n            \"price\": 279,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/ryuga2pro.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Thruster\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Blue\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"d1293a67-9688-4632-a2a1-8e07fd5e4734\",\n            \"createdAt\": \"2024-07-30T10:58:44.642008Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642008Z\"\n        },\n        {\n            \"name\": \"Victor Thruster F HS Limited Edition\",\n            \"description\": \"Victor Thruster F HS Limited Edition Badminton Racquet\",\n            \"price\": 309,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/Thruster-F-HS-l.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Thruster\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Red\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"373e89d6-d1c6-4279-9eed-4f47a187331a\",\n            \"createdAt\": \"2024-07-30T10:58:44.64201Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642011Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Play\",\n            \"description\": \"Yonex Arcsaber 11 Play\",\n            \"price\": 239,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"f6bf4de2-23f8-439f-80b4-cf48f60a6f5e\",\n            \"createdAt\": \"2024-07-30T10:58:44.641985Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641986Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Pro\",\n            \"description\": \"Yonex Arcsaber 11 Pro\",\n            \"price\": 339,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"23b83305-8107-473c-93b0-6913278fdac1\",\n            \"createdAt\": \"2024-07-30T10:58:44.639606Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.639607Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Tour\",\n            \"description\": \"Yonex Arcsaber 11 Tour\",\n            \"price\": 211,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"cba4af23-9e57-43bc-8813-88f004acff91\",\n            \"createdAt\": \"2024-07-30T10:58:44.641995Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641995Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Play\",\n            \"description\": \"Yonex Arcsaber 7 Play\",\n            \"price\": 189,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"e66eb660-a3ba-4158-8f4c-31ad4f2aab9a\",\n            \"createdAt\": \"2024-07-30T10:58:44.641998Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641998Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Pro\",\n            \"description\": \"Yonex Arcsaber 7 Pro\",\n            \"price\": 279,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"03c0cf51-90c4-4c00-9072-1ea2dc3130fc\",\n            \"createdAt\": \"2024-07-30T10:58:44.641996Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641996Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Tour\",\n            \"description\": \"Yonex Arcsaber 7 Tour\",\n            \"price\": 229,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"4566b17d-d756-44aa-a2ed-f2d2e8f949ba\",\n            \"createdAt\": \"2024-07-30T10:58:44.641997Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641997Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get item by id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Api-Version",
+								"type": "text",
+								"value": "1.0",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{catalogApi}}/api/catalog/items/a5751231-7c29-4fde-9193-c8d52da7a3bb?api-version=1.0",
+							"host": [
+								"{{catalogApi}}"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"items",
+								"a5751231-7c29-4fde-9193-c8d52da7a3bb"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Api-Version",
+										"value": "1.0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{catalogApi}}/api/v1/catalog/items",
+									"host": [
+										"{{catalogApi}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"catalog",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jul 2024 11:22:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pageIndex\": 0,\n    \"pageSize\": 10,\n    \"count\": 19,\n    \"data\": [\n        {\n            \"name\": \"Victor Auraspeed 90K Metallic\",\n            \"description\": \"Victor Auraspeed 90K Metallic Badminton Racquet\",\n            \"price\": 278.98,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/Auraspeed90K.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Auraspeed\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Blue\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"a5751231-7c29-4fde-9193-c8d52da7a3bb\",\n            \"createdAt\": \"2024-07-30T10:58:44.642009Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642009Z\"\n        },\n        {\n            \"name\": \"Victor Auraspeed ARS-LJH Speed\",\n            \"description\": \"Victor Auraspeed ARS-LJH Speed Attacking Badminton Racquet\",\n            \"price\": 236.95,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/RS-LJHSpeed.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Auraspeed\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Red\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"2aff3259-2d99-4998-8bca-ec60269f8094\",\n            \"createdAt\": \"2024-07-30T10:58:44.64201Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.64201Z\"\n        },\n        {\n            \"name\": \"Victor Thruster 2024 NEW RYUGA2 PRO\",\n            \"description\": \"Victor Thruster 2024 NEW RYUGA2 PRO\",\n            \"price\": 279,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/ryuga2pro.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Thruster\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Blue\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"d1293a67-9688-4632-a2a1-8e07fd5e4734\",\n            \"createdAt\": \"2024-07-30T10:58:44.642008Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642008Z\"\n        },\n        {\n            \"name\": \"Victor Thruster F HS Limited Edition\",\n            \"description\": \"Victor Thruster F HS Limited Edition Badminton Racquet\",\n            \"price\": 309,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/Thruster-F-HS-l.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Thruster\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Red\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"373e89d6-d1c6-4279-9eed-4f47a187331a\",\n            \"createdAt\": \"2024-07-30T10:58:44.64201Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642011Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Play\",\n            \"description\": \"Yonex Arcsaber 11 Play\",\n            \"price\": 239,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"f6bf4de2-23f8-439f-80b4-cf48f60a6f5e\",\n            \"createdAt\": \"2024-07-30T10:58:44.641985Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641986Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Pro\",\n            \"description\": \"Yonex Arcsaber 11 Pro\",\n            \"price\": 339,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"23b83305-8107-473c-93b0-6913278fdac1\",\n            \"createdAt\": \"2024-07-30T10:58:44.639606Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.639607Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Tour\",\n            \"description\": \"Yonex Arcsaber 11 Tour\",\n            \"price\": 211,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"cba4af23-9e57-43bc-8813-88f004acff91\",\n            \"createdAt\": \"2024-07-30T10:58:44.641995Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641995Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Play\",\n            \"description\": \"Yonex Arcsaber 7 Play\",\n            \"price\": 189,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"e66eb660-a3ba-4158-8f4c-31ad4f2aab9a\",\n            \"createdAt\": \"2024-07-30T10:58:44.641998Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641998Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Pro\",\n            \"description\": \"Yonex Arcsaber 7 Pro\",\n            \"price\": 279,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"03c0cf51-90c4-4c00-9072-1ea2dc3130fc\",\n            \"createdAt\": \"2024-07-30T10:58:44.641996Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641996Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Tour\",\n            \"description\": \"Yonex Arcsaber 7 Tour\",\n            \"price\": 229,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"4566b17d-d756-44aa-a2ed-f2d2e8f949ba\",\n            \"createdAt\": \"2024-07-30T10:58:44.641997Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641997Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get item by name",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "pageIndex",
+								"type": "text",
+								"value": "0",
+								"disabled": true
+							},
+							{
+								"key": "pageSize",
+								"value": "20",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{catalogApi}}/api/catalog/items/by/Yonex?PageSize=100&PageIndex=0&api-version=1.0",
+							"host": [
+								"{{catalogApi}}"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"items",
+								"by",
+								"Yonex"
+							],
+							"query": [
+								{
+									"key": "PageSize",
+									"value": "100"
+								},
+								{
+									"key": "PageIndex",
+									"value": "0"
+								},
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all items",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Api-Version",
+										"value": "1.0",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"url": {
+									"raw": "{{catalogApi}}/api/v1/catalog/items",
+									"host": [
+										"{{catalogApi}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"catalog",
+										"items"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 31 Jul 2024 11:22:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "api-supported-versions",
+									"value": "1.0"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"pageIndex\": 0,\n    \"pageSize\": 10,\n    \"count\": 19,\n    \"data\": [\n        {\n            \"name\": \"Victor Auraspeed 90K Metallic\",\n            \"description\": \"Victor Auraspeed 90K Metallic Badminton Racquet\",\n            \"price\": 278.98,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/Auraspeed90K.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Auraspeed\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Blue\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"a5751231-7c29-4fde-9193-c8d52da7a3bb\",\n            \"createdAt\": \"2024-07-30T10:58:44.642009Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642009Z\"\n        },\n        {\n            \"name\": \"Victor Auraspeed ARS-LJH Speed\",\n            \"description\": \"Victor Auraspeed ARS-LJH Speed Attacking Badminton Racquet\",\n            \"price\": 236.95,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/RS-LJHSpeed.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Auraspeed\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Red\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"2aff3259-2d99-4998-8bca-ec60269f8094\",\n            \"createdAt\": \"2024-07-30T10:58:44.64201Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.64201Z\"\n        },\n        {\n            \"name\": \"Victor Thruster 2024 NEW RYUGA2 PRO\",\n            \"description\": \"Victor Thruster 2024 NEW RYUGA2 PRO\",\n            \"price\": 279,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/ryuga2pro.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Thruster\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Blue\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"d1293a67-9688-4632-a2a1-8e07fd5e4734\",\n            \"createdAt\": \"2024-07-30T10:58:44.642008Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642008Z\"\n        },\n        {\n            \"name\": \"Victor Thruster F HS Limited Edition\",\n            \"description\": \"Victor Thruster F HS Limited Edition Badminton Racquet\",\n            \"price\": 309,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/Thruster-F-HS-l.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"02506f4a-cf71-48e9-889d-6172faf49bff\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Extra Stiff\",\n                \"Series\": \"Thruster\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Black / Red\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"373e89d6-d1c6-4279-9eed-4f47a187331a\",\n            \"createdAt\": \"2024-07-30T10:58:44.64201Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.642011Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Play\",\n            \"description\": \"Yonex Arcsaber 11 Play\",\n            \"price\": 239,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"f6bf4de2-23f8-439f-80b4-cf48f60a6f5e\",\n            \"createdAt\": \"2024-07-30T10:58:44.641985Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641986Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Pro\",\n            \"description\": \"Yonex Arcsaber 11 Pro\",\n            \"price\": 339,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"23b83305-8107-473c-93b0-6913278fdac1\",\n            \"createdAt\": \"2024-07-30T10:58:44.639606Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.639607Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 11 Tour\",\n            \"description\": \"Yonex Arcsaber 11 Tour\",\n            \"price\": 211,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc11-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Stiff\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Gray/Yellow\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"cba4af23-9e57-43bc-8813-88f004acff91\",\n            \"createdAt\": \"2024-07-30T10:58:44.641995Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641995Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Play\",\n            \"description\": \"Yonex Arcsaber 7 Play\",\n            \"price\": 189,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"e66eb660-a3ba-4158-8f4c-31ad4f2aab9a\",\n            \"createdAt\": \"2024-07-30T10:58:44.641998Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641998Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Pro\",\n            \"description\": \"Yonex Arcsaber 7 Pro\",\n            \"price\": 279,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"03c0cf51-90c4-4c00-9072-1ea2dc3130fc\",\n            \"createdAt\": \"2024-07-30T10:58:44.641996Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641996Z\"\n        },\n        {\n            \"name\": \"Yonex Arcsaber 7 Tour\",\n            \"description\": \"Yonex Arcsaber 7 Tour\",\n            \"price\": 229,\n            \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n            \"isActive\": true,\n            \"isDeleted\": false,\n            \"availableStock\": 100,\n            \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n            \"catalogType\": null,\n            \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n            \"catalogBrand\": null,\n            \"sportType\": 0,\n            \"attributes\": {\n                \"Flex\": \"Medium\",\n                \"Series\": \"Arcsaber\",\n                \"Weight\": \"3U/U4\",\n                \"Color(s)\": \"Grayish Pearl\",\n                \"Grip Size\": \"G4/G5\"\n            },\n            \"id\": \"4566b17d-d756-44aa-a2ed-f2d2e8f949ba\",\n            \"createdAt\": \"2024-07-30T10:58:44.641997Z\",\n            \"updatedAt\": \"2024-07-30T10:58:44.641997Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Create new Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var date = new Date()",
+									"date.setDate(date.getDate() + 14);",
+									"var dateString = date.toISOString();",
+									"pm.variables.set(\"dateString\", dateString);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Yonex Arcsaber 7 Pro test3\",\n    \"description\": \"Yonex Arcsaber 7 Pro test23\",\n    \"price\": 279.00,\n    \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n    \"isActive\": true,\n    \"isDeleted\": false,\n    \"availableStock\": 100,\n    \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n    \"catalogType\": null,\n    \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n    \"catalogBrand\": null,\n    \"sportType\": 0,\n    \"attributes\": {\n        \"Flex\": \"Medium\",\n        \"Series\": \"Arcsaber\",\n        \"Weight\": \"3U/U4\",\n        \"Color(s)\": \"Grayish Pearl\",\n        \"Grip Size\": \"G4/G5\"\n    }      \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{catalogApi}}/api/catalog/items?api-version=1.0",
+							"host": [
+								"{{catalogApi}}"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"items"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n     \"name\": \"Yonex Arcsaber 7 Pro TEST999\",\n    \"description\": \"Yonex Arcsaber 7 Pro TEST999\",\n    \"price\": 279.00,\n    \"pictureUrl\": \"https://rs9storage.blob.core.windows.net/racket-images/arc7-p.png\",\n    \"isActive\": true,\n    \"isDeleted\": false,\n    \"availableStock\": 100,\n    \"catalogTypeId\": \"f6c3af9c-09d0-41c3-bd14-c28e6d16eccd\",\n    \"catalogType\": null,\n    \"catalogBrandId\": \"cc99bdd1-205d-4976-ba0f-68a932516a3a\",\n    \"catalogBrand\": null,\n    \"sportType\": 0,\n    \"attributes\": {\n        \"Flex\": \"Medium\",\n        \"Series\": \"Arcsaber\",\n        \"Weight\": \"3U/U4\",\n        \"Color(s)\": \"Grayish Pearl\",\n        \"Grip Size\": \"G4/G5\"\n    },\n    \"id\": \"c7256b7c-672b-464f-8066-78560650f66c\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{catalogApi}}/api/catalog/items?api-version=1.0",
+							"host": [
+								"{{catalogApi}}"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"items"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Item",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{catalogApi}}/api/catalog/items/c7256b7c-672b-464f-8066-78560650f66c?api-version=1.0",
+							"host": [
+								"{{catalogApi}}"
+							],
+							"path": [
+								"api",
+								"catalog",
+								"items",
+								"c7256b7c-672b-464f-8066-78560650f66c"
+							],
+							"query": [
+								{
+									"key": "api-version",
+									"value": "1.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "catalogApi",
+			"value": "http://localhost:7001",
+			"type": "string"
+		},
+		{
+			"key": "basketApi",
+			"value": "http://localhost:7002",
+			"type": "string"
+		},
+		{
+			"key": "orderApi",
+			"value": "http://localhost:7003",
+			"type": "string"
+		},
+		{
+			"key": "identitySvc",
+			"value": "http://localhost:5000",
+			"type": "string"
+		},
+		{
+			"key": "gateway",
+			"value": "http://localhost:6001",
+			"type": "string"
+		}
+	]
+}
