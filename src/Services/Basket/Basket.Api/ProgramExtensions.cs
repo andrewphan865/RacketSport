@@ -15,7 +15,6 @@ public static class ProgramExtensions
 
     public static void AddCustomApplicationServices(this WebApplicationBuilder builder)
     {       
-
         builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         builder.Services.AddScoped<IBasketRepository, BasketRepository>();
         builder.Services.AddScoped<IIdentityService, IdentityService>();

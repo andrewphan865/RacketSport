@@ -15,7 +15,15 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basket", "Basket", "{71550FC5-56CA-41E7-B24A-18FF5178CEA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Basket.Api", "src\Services\Basket\Basket.Api\Basket.Api.csproj", "{5920BADC-B803-4A34-9C62-07A2CE43F1EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Basket.Api", "src\Services\Basket\Basket.Api\Basket.Api.csproj", "{5920BADC-B803-4A34-9C62-07A2CE43F1EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{877554E2-B22F-4212-9EDE-4586B6F58848}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{42F2F878-1489-4EEC-BC88-838D43F8F778}"
+	ProjectSection(SolutionItems) = preProject
+		dapr\components\racketsport-secrets.json = dapr\components\racketsport-secrets.json
+		dapr\components\racketsport-statestore.yaml = dapr\components\racketsport-statestore.yaml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +53,7 @@ Global
 		{897714C3-E2DF-4E8A-A9BC-D6F5EE842C92} = {1EDA691A-7BEE-4EC5-8A2C-7ECDD8A61FD8}
 		{71550FC5-56CA-41E7-B24A-18FF5178CEA8} = {7EF98A7D-8C84-4CCE-A0F2-CB0C59CB7BE4}
 		{5920BADC-B803-4A34-9C62-07A2CE43F1EB} = {71550FC5-56CA-41E7-B24A-18FF5178CEA8}
+		{42F2F878-1489-4EEC-BC88-838D43F8F778} = {877554E2-B22F-4212-9EDE-4586B6F58848}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC0E5625-32E3-4041-BC85-BC06E1B9AF9F}

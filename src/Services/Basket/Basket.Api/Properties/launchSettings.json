@@ -7,13 +7,14 @@
       },
       "applicationUrl": "http://localhost:5001/"
     },
-    "Container (Dockerfile)": {
-      "commandName": "Docker",
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
+    "dapr": {
+      "commandName": "Executable",
+      "executablePath": "dapr",
+      "commandLineArgs": "run --app-id basket-api --app-port 5001 --dapr-http-port 3501 --resources-path ../../../../dapr/components -- dotnet run",
+      "workingDirectory": "$(ProjectDir)",
       "environmentVariables": {
-        "ASPNETCORE_HTTP_PORTS": "8080"
-      },
-      "publishAllPorts": true
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
     }
   }
 }
