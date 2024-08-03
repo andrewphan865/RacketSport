@@ -6,3 +6,8 @@ global using System.ComponentModel.DataAnnotations;
 global using Catalog.Api.Infrastructure.EntityConfigurations;
 global using Catalog.Api.Infrastructure;
 global using System;
+global using Catalog.Api;
+global using HealthChecks.UI.Client;
+global using Catalog.Api.RequestHelpers;
+global using Mapster;
+global using Microsoft.AspNetCore.Http.HttpResults;

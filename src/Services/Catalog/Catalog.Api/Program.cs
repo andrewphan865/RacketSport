@@ -1,9 +1,4 @@
-using Asp.Versioning;
-using Catalog.Api;
-using HealthChecks.UI.Client;
-
 var builder = WebApplication.CreateBuilder(args);
-
 
 builder.Services.AddProblemDetails();
 builder.Services.AddApiVersioning();

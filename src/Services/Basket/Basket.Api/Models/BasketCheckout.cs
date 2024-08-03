@@ -1,13 +1,13 @@
 ﻿namespace Basket.Api.Models;
 
 public record BasketCheckout(
-    string UserName, 
+    string UserId, 
 
     // Shipping and BillingAddress
     string FirstName,
     string LastName,
-    string EmailAddress,
-    string AddressLine,
+    string Email,
+    string Address,
     string Country,
     string State,
     string Postcode,

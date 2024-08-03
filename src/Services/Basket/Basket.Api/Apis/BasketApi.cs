@@ -1,11 +1,12 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Mapster;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Basket.Api.Apis;
 
 public static class BasketApi
 {
-    public static IEndpointRouteBuilder MapCatalogApiV1(this IEndpointRouteBuilder app)
+    public static IEndpointRouteBuilder MapBasketApiV1(this IEndpointRouteBuilder app)
     {
         var api = app.MapGroup("api").HasApiVersion(1.0);
 
@@ -53,8 +54,14 @@ public static class BasketApi
 
             return TypedResults.BadRequest($"Basket for user {userId} not found");
         }
+        var eventRequestId = Guid.TryParse(requestId, out Guid parsedRequestId)
+                    ? parsedRequestId : Guid.NewGuid();
 
-        //TODO: send event to Order service
+        var eventMessage = basketCheckout.Adapt<UserCheckoutAcceptedIntegrationEvent>();
+        eventMessage = eventMessage with { Basket = basket! }; //Maybe need to map eventMessage manually ?
+
+        await services.EventBus.PublishAsync(eventMessage);
+
         return TypedResults.Ok(true);
     }
 

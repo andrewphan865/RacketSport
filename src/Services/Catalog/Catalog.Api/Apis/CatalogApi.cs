@@ -1,8 +1,4 @@
-﻿using Catalog.Api.RequestHelpers;
-using Mapster;
-using Microsoft.AspNetCore.Http.HttpResults;
-
-namespace Catalog.Api;
+﻿namespace Catalog.Api;
 
 public static class CatalogApi
 {

@@ -1,5 +1,4 @@
-﻿using Catalog.Api.Entities;
-using System.Text.Json;
+﻿using System.Text.Json;
 
 namespace Catalog.Api.Infrastructure;
 

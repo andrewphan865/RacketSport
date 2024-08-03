@@ -4,7 +4,7 @@ namespace Basket.Api.Infrastructure.Repositories;
 
 public class BasketRepository : IBasketRepository
 {
-    private const string StateStoreName = "racketshop-statestore";
+    private const string StateStoreName = "racketsport-statestore";
 
     private readonly DaprClient _daprClient;
     private readonly ILogger _logger;

@@ -1,15 +1,12 @@
 ﻿using Dapr.Client;
 using EventBus.Abstractions;
 using EventBus.Events;
+using EventBus.Extensions;
 using Microsoft.Extensions.Logging;
 
 namespace EventBus;
-
-
 public class DaprEventBus : IEventBus
 {
-    private const string PubSubName = "racketsport-pubsub";
-
     private readonly DaprClient _dapr;
     private readonly ILogger _logger;
 
@@ -26,9 +23,9 @@ public class DaprEventBus : IEventBus
         _logger.LogInformation(
             "Publishing event {@Event} to {PubsubName}.{TopicName}",
             integrationEvent,
-            PubSubName,
+            EventNames.DAPR_PUBSUB,
             topicName);
 
-        await _dapr.PublishEventAsync(PubSubName, topicName, (object)integrationEvent);
+        await _dapr.PublishEventAsync(EventNames.DAPR_PUBSUB, topicName, (object)integrationEvent);
     }
 }

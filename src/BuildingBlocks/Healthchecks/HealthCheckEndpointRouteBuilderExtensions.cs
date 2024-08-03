@@ -6,7 +6,7 @@ public static class HealthCheckEndpointRouteBuilderExtensions
         this WebApplication app,
         string healthPattern = "/hc",
         string livenessPattern = "/liveness",
-        Func<Microsoft.AspNetCore.Http.HttpContext, HealthReport, Task> responseWriter = default)
+        Func<Microsoft.AspNetCore.Http.HttpContext, HealthReport, Task> responseWriter = default!)
     {
         app.MapHealthChecks(healthPattern, new HealthCheckOptions()
         {
