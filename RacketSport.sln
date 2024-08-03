@@ -21,9 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{877554E2-B
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{42F2F878-1489-4EEC-BC88-838D43F8F778}"
 	ProjectSection(SolutionItems) = preProject
-		racketsport-pubsub.yaml = racketsport-pubsub.yaml
+		dapr\components\racketsport-pubsub.yaml = dapr\components\racketsport-pubsub.yaml
 		dapr\components\racketsport-secrets.json = dapr\components\racketsport-secrets.json
-		racketsport-secretstore.yaml = racketsport-secretstore.yaml
+		dapr\components\racketsport-secretstore.yaml = dapr\components\racketsport-secretstore.yaml
 		dapr\components\racketsport-statestore.yaml = dapr\components\racketsport-statestore.yaml
 	EndProjectSection
 EndProject

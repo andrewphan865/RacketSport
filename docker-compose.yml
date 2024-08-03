@@ -1,39 +1,23 @@
 services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+
   redis:
     image: redis:alpine
 
   zipkin:
     image: openzipkin/zipkin-slim:latest
 
-  rabbitmq:
-    image: rabbitmq:3-management-alpine
-
   catalogdb:
     image: postgres
 
-  catalog-api:
-    image: ${DOCKER_REGISTRY-}catalog-api
-    build:
-      context: .
-      dockerfile: src/Services/Catalog/Catalog.Api/Dockerfile
-    depends_on:
-     - catalogdb
-    
-
-  catalog-api-dapr:
-    image: "daprio/daprd:1.13.5"
-    network_mode: "service:catalog-api"
-    depends_on:
-      - catalog-api
-
   basket-api:
-    image: ${DOCKER_REGISTRY-}basket-api
+    image: ${DOCKER_REGISTRY-racketsport/}basket.api:${TAG:-latest}
     build:
       context: .
       dockerfile: src/Services/Basket/Basket.Api/Dockerfile
     depends_on:
       - redis
-      - rabbitmq
 
   basket-api-dapr:
     image: "daprio/daprd:1.13.5"
@@ -41,6 +25,19 @@ services:
     depends_on:
       - basket-api
 
+  catalog-api:
+    image: ${DOCKER_REGISTRY-racketsport/}catalog.api:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: src/Services/Catalog/Catalog.Api/Dockerfile
+    depends_on:
+      - catalogdb
+
+  catalog-api-dapr:
+    image: "daprio/daprd:1.13.5"
+    network_mode: "service:catalog-api"
+    depends_on:
+      - catalog-api
+
   dapr-placement:
     image: "daprio/dapr:1.13.5"
-

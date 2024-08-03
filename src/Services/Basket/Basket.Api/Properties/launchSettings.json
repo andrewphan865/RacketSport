@@ -10,7 +10,7 @@
     "dapr": {
       "commandName": "Executable",
       "executablePath": "dapr",
-      "commandLineArgs": "run --app-id basket-api --app-port 5003 --dapr-http-port 50001 --resources-path ../../../../dapr/components -- dotnet run",
+      "commandLineArgs": "run --app-id basket-api --app-port 50003 --dapr-http-port 50001 --resources-path ../../../../dapr/components -- dotnet run",
       "workingDirectory": "$(ProjectDir)",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -20,7 +20,7 @@
       "commandName": "Docker",
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}",
       "environmentVariables": {
-        "ASPNETCORE_HTTP_PORTS": "8080"
+        "ASPNETCORE_HTTP_PORTS": "80"
       },
       "publishAllPorts": true
     }
