@@ -1,33 +1,89 @@
-version: '3.4'
-
 services:
+  redis:
+    image: redis:alpine
+    ports:
+      - "5379:6379"
+
+  zipkin:
+    ports:
+      - "5411:9411"
+
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
 
   catalogdb:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgrespw
-      - POSTGRES_DB=CatalogDb    
+      - POSTGRES_DB=CatalogDb
     ports:
-      - 5432:5432
+      - "5432:5432"
     volumes:
-      - postgres_catalog:/var/lib/postresql/data
+      - postgres-catalog:/var/lib/postresql/data
     restart: on-failure
     deploy:
       restart_policy:
         condition: on-failure
         max_attempts: 5
 
-  catalog.api:
+  catalog-api:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_HTTP_PORTS=8080
-      - ConnectionStrings__CatalogConnection=Server=catalogdb;Port=5432;Database=CatalogDb;User Id=postgres;Password=postgrespw  
+      - ConnectionStrings__CatalogConnection=Server=catalogdb;Port=5432;Database=CatalogDb;User Id=postgres;Password=postgrespw
     depends_on:
-    - catalogdb
+      - catalogdb
     ports:
-      - "6000:8080"
+      - "5102:8080"
+      - "50002:50001"
     volumes:
       - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
 
+  catalog-api-dapr:
+    command:
+      [
+        "./daprd",
+        "-app-id",
+        "catalog-api",
+        "-app-port",
+        "8080",
+        "-resources-path",
+        "/components",
+        "-config",
+        "/configuration/racketsport-config.yaml",
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+
+  basket-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_HTTP_PORTS=8080
+    ports:
+      - "5103:8080"
+      - "50003:50001"
+    volumes:
+      - ${APPDATA}/Microsoft/UserSecrets:/home/app/.microsoft/usersecrets:ro
+
+  basket-api-dapr:
+    command:
+      [
+        "./daprd",
+        "-app-id",
+        "basket-api",
+        "-app-port",
+        "80808",
+        "-resources-path",
+        "/components",
+        "-config",
+        "/configuration/racketsport-config.yaml",
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+
 volumes:
-  postgres_catalog:
+  postgres-catalog:

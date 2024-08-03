@@ -5,8 +5,17 @@
       "launchBrowser": false,
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      },   
-      "applicationUrl": "http://localhost:5000/"
+      },
+      "applicationUrl": "http://localhost:5002/"
+    }
+  },
+  "dapr": {
+    "commandName": "Executable",
+    "executablePath": "dapr",
+    "commandLineArgs": "run --app-id catalog-api --app-port 5002 --dapr-http-port 50001 --resources-path ../../../../dapr/components -- dotnet run",
+    "workingDirectory": "$(ProjectDir)",
+    "environmentVariables": {
+      "ASPNETCORE_ENVIRONMENT": "Development"
     }
   }
 }
