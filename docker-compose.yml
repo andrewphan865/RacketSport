@@ -16,6 +16,9 @@ services:
     build:
       context: .
       dockerfile: src/Services/Catalog/Catalog.Api/Dockerfile
+    depends_on:
+     - catalogdb
+    
 
   catalog-api-dapr:
     image: "daprio/daprd:1.13.5"
@@ -41,5 +44,3 @@ services:
   dapr-placement:
     image: "daprio/dapr:1.13.5"
 
-volumes:
-  postgres-catalog:
