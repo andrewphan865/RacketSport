@@ -1,5 +1,4 @@
-﻿using Mapster;
-using Microsoft.AspNetCore.Http.HttpResults;
+﻿using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Basket.Api.Apis;
@@ -34,10 +33,9 @@ public static class BasketApi
         CustomerBasket customerBasket)
     {
         var userId = services.IdentityService.GetUserIdentity();
-
         customerBasket.BuyerId = userId;
 
-        return TypedResults.Ok(await services.Repository.GetBasketAsync(userId));
+        return TypedResults.Ok(await services.Repository.UpdateBasketAsync(customerBasket));
     }
 
     public static async Task<Results<Ok<bool>, BadRequest<string>>> Checkout(
@@ -46,19 +44,32 @@ public static class BasketApi
         [FromHeader(Name = "X-Request-Id")] string requestId)
     {
         var userId = services.IdentityService.GetUserIdentity();
-
         var basket = await services.Repository.GetBasketAsync(userId);
         if (basket == null)
         {
-            services.Logger.LogWarning($"Basket for user {userId} not found");       
+            services.Logger.LogWarning($"Basket for user {userId} not found");
 
             return TypedResults.BadRequest($"Basket for user {userId} not found");
         }
         var eventRequestId = Guid.TryParse(requestId, out Guid parsedRequestId)
                     ? parsedRequestId : Guid.NewGuid();
 
-        var eventMessage = basketCheckout.Adapt<UserCheckoutAcceptedIntegrationEvent>();
-        eventMessage = eventMessage with { Basket = basket! }; //Maybe need to map eventMessage manually ?
+           var eventMessage = new UserCheckoutAcceptedIntegrationEvent(
+            userId,
+            basketCheckout.Email,
+            basketCheckout.FirstName,
+            basketCheckout.LastName,
+            basketCheckout.Address,
+            basketCheckout.State,
+            basketCheckout.Country,
+            basketCheckout.Postcode,
+            basketCheckout.PaymentMethod,
+            basketCheckout.CardNumber,
+            basketCheckout.CardHolderName,
+            basketCheckout.Expiration,
+            basketCheckout.CVV,
+            eventRequestId,
+            basket);
 
         await services.EventBus.PublishAsync(eventMessage);
 

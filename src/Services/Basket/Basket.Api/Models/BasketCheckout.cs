@@ -1,7 +1,7 @@
 ﻿namespace Basket.Api.Models;
 
 public record BasketCheckout(
-    string UserId, 
+    string UserId,
 
     // Shipping and BillingAddress
     string FirstName,
@@ -16,6 +16,6 @@ public record BasketCheckout(
     string PaymentMethod,
     string CardNumber,
     string CardHolderName,
-    string Expiration,
+    DateTime Expiration,
     string CVV
 );
