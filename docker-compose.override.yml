@@ -4,13 +4,25 @@ services:
     ports:
       - "5379:6379"
 
+  redis-commander:
+    image: rediscommander/redis-commander:latest
+    environment:
+      - REDIS_HOSTS=local:redis:6379
+    ports:
+      - "8081:8081"
+
   zipkin:
     ports:
       - "5411:9411"
 
   rabbitmq:
+    image: rabbitmq:3-management-alpine
+    environment:
+      RABBITMQ_DEFAULT_USER: user
+      RABBITMQ_DEFAULT_PASS: password
     ports:
       - "5672:5672"
+      - "15672:15672"
 
   catalogdb:
     environment:
