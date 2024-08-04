@@ -1,4 +1,4 @@
-﻿namespace Catalog.Api.Entities;
+﻿namespace Catalog.Api.Models;
 
 public enum SportType
 {

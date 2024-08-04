@@ -1,5 +1,6 @@
-﻿namespace Catalog.Api.Entities;
-public class CatalogBrand : BaseEntity
+﻿namespace Catalog.Api.Models;
+
+public class CatalogType: BaseEntity
 {
     [Key]
     public Guid Id { get; set; }
@@ -7,3 +8,4 @@ public class CatalogBrand : BaseEntity
     [Required]
     public string Name { get; set; }
 }
+

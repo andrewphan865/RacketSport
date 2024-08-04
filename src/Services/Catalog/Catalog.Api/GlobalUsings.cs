@@ -1,4 +1,4 @@
-﻿global using Catalog.Api.Entities;
+﻿global using Catalog.Api.Models;
 global using Catalog.Api.Infrastructure.Exceptions;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using Microsoft.EntityFrameworkCore;

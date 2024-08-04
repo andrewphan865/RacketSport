@@ -1,4 +1,4 @@
-﻿namespace Catalog.Api.Entities;
+﻿namespace Catalog.Api.Models;
 
 public class CatalogItem : BaseEntity
 {
@@ -43,8 +43,8 @@ public class CatalogItem : BaseEntity
 
     public int AddStock(int quantity)
     {
-        int original = this.AvailableStock;    
-        this.AvailableStock += quantity;       
+        int original = this.AvailableStock;
+        this.AvailableStock += quantity;
         return this.AvailableStock - original;
     }
 }

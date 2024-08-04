@@ -22,7 +22,7 @@ namespace Catalog.Api.Infrastructure.Migrations
 
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
-            modelBuilder.Entity("Catalog.Api.Entities.CatalogBrand", b =>
+            modelBuilder.Entity("Catalog.Api.Models.CatalogBrand", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -44,7 +44,7 @@ namespace Catalog.Api.Infrastructure.Migrations
                     b.ToTable("CatalogBrand", (string)null);
                 });
 
-            modelBuilder.Entity("Catalog.Api.Entities.CatalogItem", b =>
+            modelBuilder.Entity("Catalog.Api.Models.CatalogItem", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -106,7 +106,7 @@ namespace Catalog.Api.Infrastructure.Migrations
                     b.ToTable("CatalogItem", (string)null);
                 });
 
-            modelBuilder.Entity("Catalog.Api.Entities.CatalogType", b =>
+            modelBuilder.Entity("Catalog.Api.Models.CatalogType", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -128,13 +128,13 @@ namespace Catalog.Api.Infrastructure.Migrations
                     b.ToTable("CatalogType", (string)null);
                 });
 
-            modelBuilder.Entity("Catalog.Api.Entities.CatalogItem", b =>
+            modelBuilder.Entity("Catalog.Api.Models.CatalogItem", b =>
                 {
-                    b.HasOne("Catalog.Api.Entities.CatalogBrand", "CatalogBrand")
+                    b.HasOne("Catalog.Api.Models.CatalogBrand", "CatalogBrand")
                         .WithMany()
                         .HasForeignKey("CatalogBrandId");
 
-                    b.HasOne("Catalog.Api.Entities.CatalogType", "CatalogType")
+                    b.HasOne("Catalog.Api.Models.CatalogType", "CatalogType")
                         .WithMany()
                         .HasForeignKey("CatalogTypeId");
 
