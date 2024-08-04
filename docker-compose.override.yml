@@ -39,13 +39,25 @@ services:
       - "5432:5432"
     volumes:
       - postgres-catalog:/var/lib/postresql/data
-    restart: on-failure
-    deploy:
-      restart_policy:
-        condition: on-failure
-        max_attempts: 5
+    restart: always
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d CatalogDb"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  identitydb:
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgrespw
+      - POSTGRES_DB=IdentityDb
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-identity:/var/lib/postresql/data
+    restart: always    
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d IdentityDb"]
       interval: 10s
       timeout: 5s
       retries: 5
@@ -106,6 +118,38 @@ services:
       - "./dapr/components/:/components"
       - "./dapr/configuration/:/configuration"
 
+  identity-api:
+    environment:
+        - ASPNETCORE_ENVIRONMENT=Development
+        - ASPNETCORE_URLS=http://0.0.0.0:80
+        - ConnectionStrings__IdentityConnection=Server=identitydb;Port=5432;Database=IdentityDb;User Id=postgres;Password=postgrespw
+        - SeqServerUrl=http://seq
+        - ClientApp=http://localhost:3000
+    ports:
+        - "5102:80"
+        - "50002:50001"
+    depends_on:
+       identitydb:
+        condition: service_healthy
+
+  identity-api-dapr:
+    command:
+        [
+        "./daprd",
+        "-app-id",
+        "catalog-api",
+        "-app-port",
+        "80",
+        "-resources-path",
+        "/components",
+        "-config",
+        "/configuration/racketsport-config.yaml",
+        ]
+    volumes:
+        - "./dapr/components/:/components"
+        - "./dapr/configuration/:/configuration"
+ 
+
   dapr-placement:
     command: ["./placement", "-port", "50000", "-log-level", "debug"]
     ports:
@@ -113,4 +157,6 @@ services:
 
 volumes:
   postgres-catalog:
+    external: false
+  postgres-identity:
     external: false

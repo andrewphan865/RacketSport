@@ -10,12 +10,11 @@ public record BasketCheckout(
     string Address,
     string Country,
     string State,
-    string Postcode,
+    string PostCode,
 
-    // Payment
-    string PaymentMethod,
+    // Payment   
     string CardNumber,
     string CardHolderName,
     DateTime Expiration,
-    string CVV
+    string SecurityNumber
 );

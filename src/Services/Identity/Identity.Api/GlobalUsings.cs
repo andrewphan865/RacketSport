@@ -1,5 +1,15 @@
-﻿namespace Identity.Api;
-
-public class GlobalUsings
-{
-}
+﻿global using Duende.IdentityServer.Models;
+global using Duende.IdentityServer.Services;
+global using Identity.Api.Models;
+global using IdentityModel;
+global using Microsoft.AspNetCore.Identity;
+global using System.Security.Claims;
+global using Identity.Api.Services;
+global using HealthChecks.UI.Client;
+global using System.IdentityModel.Tokens.Jwt;
+global using Identity.Api;
+global using Dapr.Client;
+global using Dapr.Extensions.Configuration;
+global using Identity.Api.Data;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Diagnostics.HealthChecks;

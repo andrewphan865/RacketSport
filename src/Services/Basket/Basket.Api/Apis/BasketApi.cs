@@ -62,12 +62,11 @@ public static class BasketApi
             basketCheckout.Address,
             basketCheckout.State,
             basketCheckout.Country,
-            basketCheckout.Postcode,
-            basketCheckout.PaymentMethod,
+            basketCheckout.PostCode,
             basketCheckout.CardNumber,
             basketCheckout.CardHolderName,
             basketCheckout.Expiration,
-            basketCheckout.CVV,
+            basketCheckout.SecurityNumber,
             eventRequestId,
             basket);
 

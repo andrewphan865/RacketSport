@@ -9,11 +9,10 @@ public record UserCheckoutAcceptedIntegrationEvent(
     string State,
     string Country,
     string Postcode,
-    string PaymentMethod,
     string CardNumber,
     string CardHolderName,
     DateTime Expiration,
-    string CVV,
+    string SecurityNumber,
     Guid RequestId,
     CustomerBasket Basket)
     : IntegrationEvent;
