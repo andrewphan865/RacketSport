@@ -1,9 +1,14 @@
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddCustomSerilog();
 builder.AddCustomHealthChecks();
 builder.AddCustomApplicationServices();
-builder.Services.AddDaprClient();
+
+builder.Services.AddProblemDetails();
 builder.Services.AddApiVersioning();
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddDaprClient();
 
 var app = builder.Build();
 

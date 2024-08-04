@@ -15,6 +15,12 @@ services:
     ports:
       - "5411:9411"
 
+  seq:
+    environment:
+      - ACCEPT_EULA=Y
+    ports:
+      - "5340:80"
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
     environment:
@@ -49,6 +55,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
       - ConnectionStrings__CatalogConnection=Server=catalogdb;Port=5432;Database=CatalogDb;User Id=postgres;Password=postgrespw
+      - SeqServerUrl=http://seq
     ports:
       - "5102:80"
       - "50002:50001"
@@ -77,6 +84,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ASPNETCORE_URLS=http://0.0.0.0:80
+      - SeqServerUrl=http://seq
     ports:
       - "5103:80"
       - "50003:50001"

@@ -8,6 +8,9 @@ services:
   zipkin:
     image: openzipkin/zipkin-slim:latest
 
+  seq:
+    image: datalust/seq:latest
+
   catalogdb:
     image: postgres
 
