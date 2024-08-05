@@ -7,9 +7,11 @@ public static class ProgramExtensions
 
     public static void AddCustomConfiguration(this WebApplicationBuilder builder)
     {
-        builder.Configuration.AddDaprSecretStore(
-           "racketsport-secretstore",
-           new DaprClientBuilder().Build());
+        //https://github.com/juris-greitans/dapr-sdk-add-dapr-secret-store-bug-001
+        // builder.Configuration.AddDaprSecretStore(
+        //    "racketsport-secretstore",
+        //    new DaprClientBuilder().Build(),
+        //    TimeSpan.FromSeconds(60));
 
     }
 
@@ -25,7 +27,7 @@ public static class ProgramExtensions
             .CreateLogger();
 
         builder.Host.UseSerilog();
-    }  
+    }
 
     public static void AddCustomDatabase(this WebApplicationBuilder builder)
     {

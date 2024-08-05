@@ -29,6 +29,11 @@ services:
     ports:
       - "5672:5672"
       - "15672:15672"
+    healthcheck:
+      test: ["CMD", "rabbitmqctl", "status"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   catalogdb:
     environment:
@@ -52,10 +57,10 @@ services:
       - POSTGRES_PASSWORD=postgrespw
       - POSTGRES_DB=IdentityDb
     ports:
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres-identity:/var/lib/postresql/data
-    restart: always    
+    restart: always
     healthcheck:
       test: ["CMD-SHELL", "pg_isready -U postgres -d IdentityDb"]
       interval: 10s
@@ -91,6 +96,9 @@ services:
     volumes:
       - "./dapr/components/:/components"
       - "./dapr/configuration/:/configuration"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
 
   basket-api:
     environment:
@@ -117,24 +125,27 @@ services:
     volumes:
       - "./dapr/components/:/components"
       - "./dapr/configuration/:/configuration"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
 
   identity-api:
     environment:
-        - ASPNETCORE_ENVIRONMENT=Development
-        - ASPNETCORE_URLS=http://0.0.0.0:80
-        - ConnectionStrings__IdentityConnection=Server=identitydb;Port=5432;Database=IdentityDb;User Id=postgres;Password=postgrespw
-        - SeqServerUrl=http://seq
-        - ClientApp=http://localhost:3000
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://0.0.0.0:80
+      - ConnectionStrings__IdentityConnection=Server=identitydb;Port=5432;Database=IdentityDb;User Id=postgres;Password=postgrespw
+      - SeqServerUrl=http://seq
+      - ClientApp=http://localhost:3000
     ports:
-        - "5102:80"
-        - "50002:50001"
+      - "5104:80"
+      - "50004:50001"
     depends_on:
-       identitydb:
+      identitydb:
         condition: service_healthy
 
   identity-api-dapr:
     command:
-        [
+      [
         "./daprd",
         "-app-id",
         "catalog-api",
@@ -144,11 +155,13 @@ services:
         "/components",
         "-config",
         "/configuration/racketsport-config.yaml",
-        ]
+      ]
     volumes:
-        - "./dapr/components/:/components"
-        - "./dapr/configuration/:/configuration"
- 
+      - "./dapr/components/:/components"
+      - "./dapr/configuration/:/configuration"
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
 
   dapr-placement:
     command: ["./placement", "-port", "50000", "-log-level", "debug"]

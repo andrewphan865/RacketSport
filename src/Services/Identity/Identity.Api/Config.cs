@@ -36,7 +36,7 @@ public static class Config
                 }
         };
 
-    public static IEnumerable<Client> Clients(IConfiguration config) =>
+    public static IEnumerable<Client> Clients(ConfigurationManager config) =>
          new Client[]
             {
                 new Client
@@ -60,11 +60,6 @@ public static class Config
                         AllowedScopes = {"openid", "profile", "racketSport", "basket", "ordering", "shoppingaggr"},
                         AccessTokenLifetime = 3600*24*30,
                         AlwaysIncludeUserClaimsInIdToken = true
-                    }   
+                    }
         };
-
-    internal static ICollection<Client> GetClients(ConfigurationManager configuration)
-    {
-        throw new NotImplementedException();
-    }
 }

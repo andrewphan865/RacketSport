@@ -7,9 +7,11 @@ public static class ProgramExtensions
 
     public static void AddCustomConfiguration(this WebApplicationBuilder builder)
     {
-        builder.Configuration.AddDaprSecretStore(
-           "racketsport-secretstore",
-           new DaprClientBuilder().Build());
+        //https://github.com/juris-greitans/dapr-sdk-add-dapr-secret-store-bug-001
+        // builder.Configuration.AddDaprSecretStore(
+        //    "racketsport-secretstore",
+        //    new DaprClientBuilder().Build(),
+        //     TimeSpan.FromSeconds(60));
     }
 
     public static void AddCustomSerilog(this WebApplicationBuilder builder)
@@ -57,7 +59,7 @@ public static class ProgramExtensions
                 .AddInMemoryIdentityResources(Config.IdentityResources)
                 .AddInMemoryApiScopes(Config.ApiScopes)
                 .AddInMemoryApiResources(Config.ApiResources)
-                .AddInMemoryClients(Config.GetClients(builder.Configuration))
+                .AddInMemoryClients(Config.Clients(builder.Configuration))
                 .AddAspNetIdentity<ApplicationUser>();
 
         // not recommended for production - you need to store your key material somewhere secure
