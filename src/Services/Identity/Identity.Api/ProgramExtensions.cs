@@ -7,6 +7,8 @@ public static class ProgramExtensions
 
     public static void AddCustomConfiguration(this WebApplicationBuilder builder)
     {
+        builder.Services.AddRazorPages();
+
         //https://github.com/juris-greitans/dapr-sdk-add-dapr-secret-store-bug-001
         // builder.Configuration.AddDaprSecretStore(
         //    "racketsport-secretstore",
